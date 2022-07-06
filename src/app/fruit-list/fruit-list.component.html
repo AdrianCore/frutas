@@ -1,0 +1,27 @@
+  <div class="container">
+    <h2>Lista de frutas</h2>
+    <table class="table table.striped">
+      <thead class="table-dark">
+        <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th>Genus</th>
+          <th>Family</th>
+          <th>Order</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fruit of fruits">
+          <td>{{fruit.id}}</td>
+          <td>{{fruit.name}}</td>
+          <td>{{fruit.genus}}</td>
+          <td>{{fruit.family}}</td>
+          <td>{{fruit.order}}</td>
+          <td>
+            <button (click)="showFruit(fruit.id)" class="btn btn-primary" style="margin-left: 10px;">Detalles</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
